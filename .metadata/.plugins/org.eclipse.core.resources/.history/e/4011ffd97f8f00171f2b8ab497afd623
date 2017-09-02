@@ -1,0 +1,50 @@
+
+import java.awt.*;
+import javax.swing.JApplet;
+
+
+public class Flag extends JApplet {
+	
+	private double A = 1.0;
+	private double B = 1.9;
+	private double C = 0.5385;
+	private double D = 0.76;
+	private double E = 0.054;
+	private double F = 0.054;
+	private double G = 0.063;
+	private double H = 0.063;
+	private double K = 0.0616;
+	private double L = 0.0769;
+	
+	public Flag() {
+		
+	}
+	
+	public void paint(Graphics g) {
+		background(g);
+		
+		int height = getHeight();
+		int width = getWidth();
+		
+		System.out.println(getHeight());
+	}
+	
+	public void background(Graphics g) {
+		//draw stripes
+		g.setColor(Color.RED);
+		g.fillRect(0, 0, (int) (width * B), (int) (height * A));
+		g.setColor(Color.WHITE);
+		
+		for (int j = 1; j <= 6; j++) {
+			g.fillRect(0, (int) (2 * L * j), (int) (width * B), (int) (height * L));
+		}
+		
+		//draw union
+		g.setColor(Color.BLUE);
+		g.fillRect(0, 0, (int) (width * D), (int) (height * C));
+	}
+
+	public void stars(Graphics g) {
+	
+	}
+}

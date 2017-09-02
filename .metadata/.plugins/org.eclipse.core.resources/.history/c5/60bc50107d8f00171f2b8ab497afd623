@@ -1,0 +1,31 @@
+
+import java.awt.*;
+import javax.swing.JFrame;
+
+//remember to change jFrame to jPanel
+
+public class Flag extends JFrame {
+	
+	public void paint(Graphics g) {
+		background(g, 40);
+		stars(g);
+	}
+	
+	public void background(Graphics g, int i) {
+		//draw stripes
+		g.setColor(Color.RED);
+		g.fillRect(i, i, 988, 520);
+		g.setColor(Color.WHITE);
+		for (int j = 1; j <= 6; j++) {
+			g.fillRect(i, 80 * j - 40 + i, 988, 40);
+		}
+		//draw union
+		g.setColor(Color.BLUE);
+		g.fillRect(i, i, 395, 280);
+	}
+
+	public void stars(Graphics g) {
+	
+	}
+	
+}

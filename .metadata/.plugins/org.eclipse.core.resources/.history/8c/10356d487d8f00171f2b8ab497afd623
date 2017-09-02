@@ -1,0 +1,22 @@
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//JFrame jFrame = new JFrame("Flag");
+    	//Resize resi = new Resize();
+    	//jFrame.add(resi);
+    	//jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	//jFrame.setSize(1000, 1000);
+    	
+    	//Flag flag = new Flag();
+    	//jFrame.add(flag);
+    	//jFrame.pack();
+    	//jFrame.setVisible(true);
+		
+		Flag c = new Flag();
+		c.setDefaultCloseOperation(c.EXIT_ON_CLOSE);
+		c.setVisible(true);
+	}
+
+}
