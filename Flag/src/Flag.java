@@ -2,7 +2,6 @@
 import java.awt.*;
 import javax.swing.JApplet;
 
-
 public class Flag extends JApplet {
 	
 	private double A = 1.0;
@@ -16,23 +15,29 @@ public class Flag extends JApplet {
 	private double K = 0.0616;
 	private double L = 0.0769;
 	
+	private double pi = Math.PI;
+	
 	public Flag() {
 		
 	}
 	
 	public void paint(Graphics g) {
-		background(g);
-	}
-	
-	public void background(Graphics g) {
+		
 		int height = getHeight();
 		int width = getWidth();
 		
-		if (width >= height) {
-			height = (int) (height / 1.9);
-		} else {
-			height = (int) (height * 1.9);
-		}
+		if (height * B <= width) {
+            width = (int) (height * B);
+            height = getHeight();
+        } else {
+            height = (int) (width / B);
+        }
+		
+		background(g, height, width);
+		stars(g, height, width);
+	}
+	
+	public void background(Graphics g, int height, int width) {
 		
 		//draw stripes
 		g.setColor(Color.RED);
@@ -40,15 +45,38 @@ public class Flag extends JApplet {
 		
 		g.setColor(Color.WHITE);
 		for (int j = 1; j <= 6; j++) {
-			g.fillRect(0, (int) (2 * L * j), (int) (width), (int) (height * L));
+			g.fillRect(0, (int) (2 * height * L * j - (height * L)), (int) (width), (int) (height * L));
 		}
 		
 		//draw union
 		g.setColor(Color.BLUE);
-		g.fillRect(0, 0, (int) (width * D), (int) (height * C));
+		g.fillRect(0, 0, (int) (height * D), (int) (height * C));
 	}
 
-	public void stars(Graphics g) {
-	
+	public void stars(Graphics g, int height, int width) {
+		
+		for (int i = 1; i <= 9; i++) {
+			
+			double xOffset;
+			double yOffset;
+			
+			int length;
+			double r = H * height / 2;
+			
+			if (i/2 == 0) {
+				xOffset = G;
+				length = 6;
+			} else {
+				xOffset = 2 * G;
+				length = 5;
+			}
+			
+			for (int j = 1; j <= length; j++) {
+				int[] xc = {(int) Math.cos(0.5 * pi / 5), (int) Math.cos(2.5 * pi / 5), (int) Math.cos(4.5 * pi / 5), (int) Math.cos(6.5 * pi / 5), (int) Math.cos(8.5 * pi / 5)};
+				int[] yc = {(int) Math.sin(0.5 * pi / 5), (int) Math.sin(2.5 * pi / 5), (int) Math.sin(4.5 * pi / 5), (int) Math.sin(6.5 * pi / 5), (int) Math.sin(8.5 * pi / 5)};
+				
+				g.fillPolygon(xc, yc, 5);
+			}
+		}
 	}
 }
