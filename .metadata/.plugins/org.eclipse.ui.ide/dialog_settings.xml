@@ -5,9 +5,11 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="C:\Users\eyjth\Downloads"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\eyjth\Documents\GitHub\APCS\Flag.zip"/>
 			<item value="C:\Users\eyjth\Downloads\Intro.zip"/>
 		</list>
 	</section>
