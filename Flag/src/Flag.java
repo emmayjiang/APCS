@@ -2,6 +2,12 @@
 import java.awt.*;
 import javax.swing.JApplet;
 
+/**
+ * Creates an American Flag.
+ * 
+ * @author	Emma Jiang
+ * @version 9/7/17
+ */
 public class Flag extends JApplet {
 	
 	private static final double B = 1.9;
