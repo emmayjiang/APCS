@@ -110,6 +110,6 @@ public class Flag extends JApplet {
 	}
 	
 	public static void main(String[] args) {
-		Flag flag = new Flag();
+		paint(Graphics g);
 	}
 }
