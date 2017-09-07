@@ -1,0 +1,10 @@
+
+The objective of this project was to write a program that produces an Applet which displays the United States flag to scale.
+	
+My project fulfills the specification correctly.
+It creates a flag with 13 stripes of alternating colors (red, white), creates a blue rectangle representative of the union of the flag.
+On top of the union, there are 50 white stars, in the same arrangement as on the actual flag.
+All parts of the flag are to scale.
+The entire applet is scaleable, allowing you to make the flag larger/smaller via the size of the applet.
+I was not able to figure out code that would allow the user to scale the flag using mouse wheel or other methods.
+

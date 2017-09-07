@@ -23,7 +23,6 @@ public class Flag extends JApplet {
 		int height = getHeight();
 		int width = getWidth();
 		
-		//makes it so the flag would scale properly
 		if (height * B <= width) {
             width = (int) (height * B);
             height = getHeight();

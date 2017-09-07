@@ -4,15 +4,16 @@ import javax.swing.JApplet;
 
 public class Flag extends JApplet {
 	
-	private static final double B = 1.9;
-	private static final double C = 0.5385;
-	private static final double D = 0.76;
-	private static final double F = 0.054;
-	private static final double G = 0.063;
-	private static final double K = 0.0616;
-	private static final double L = 0.0769;
+	private double A = 1.0;
+	private double B = 1.9;
+	private double C = 0.5385;
+	private double D = 0.76;
+	private double F = 0.054;
+	private double G = 0.063;
+	private double K = 0.0616;
+	private double L = 0.0769;
 	
-	private static final double pi = Math.PI;
+	private double pi = Math.PI;
 	
 	public Flag() {
 		
@@ -23,7 +24,6 @@ public class Flag extends JApplet {
 		int height = getHeight();
 		int width = getWidth();
 		
-		//makes it so the flag would scale properly
 		if (height * B <= width) {
             width = (int) (height * B);
             height = getHeight();
@@ -31,16 +31,10 @@ public class Flag extends JApplet {
             height = (int) (width / B);
         }
 		
-		paintFlag(g, height, width);
+		background(g, height, width);
 	}
 	
-	/**
-	 * Draws the stripes, the union, and the stars on the flag.
-	 * 
-	 * @param height	height of the flag
-	 * @param width		width of the flag
-	 */
-	public void paintFlag(Graphics g, int height, int width) {
+	public void background(Graphics g, int height, int width) {
 		
 		//draw stripes
 		g.setColor(Color.RED);
@@ -77,35 +71,35 @@ public class Flag extends JApplet {
 		}
 	}
 
-	/**
-	 * A method that draws a star on the flag.
-	 * 
-	 * @param xc		x-coordinate of star
-	 * @param yc		y-coordinate of star
-	 * @param width		width of flag
-	 * @param height	height of flag
-	 */
-	public void stars(Graphics g, int xc, int yc, int width, int height){
+	//draws the stars
+	public void stars(Graphics g, int midX, int midY,int width,int height){
 		
-		//stores radius for stars
 		int r[] = {(int) (height * K / 2), (int) (height * K / 4), (int) (height * K / 2), (int) (height * K / 4)};
 		
 		int[] X = new int[10];
 		int[] Y = new int[10];
 			
-		//fills array to store points for the stars
+		//outer border of the star
 		for (double i = 0.0; i < 10; i++)
 		{
 			int j = (int) i;
-			double x = Math.cos(i * ((2 * pi) / 10) + 60) * r[j % 4];
-			double y = Math.sin(i * ((2 * pi) / 10) + 60) * r[j % 4];
+			double x = Math.cos(i * ((2 * pi) / 5) + 60) * r[j % 4];
+			double y = Math.sin(i * ((2 * pi) / 5) + 60) * r[j % 4];
 
-			X[j] = (int) x + xc;
-			Y[j] = (int) y + yc;
+			X[j] = (int) x + midX;
+			Y[j] = (int) y + midY;
 		}
 
 		//color the stars
 		g.setColor(Color.WHITE);
 		g.fillPolygon(X, Y, 10);
+		
+		//int xCordSmallP[] = new int[5];
+		//int yCordSmallP[] = new int[5];
+		//for(int k = 0; k<5; k++){
+			//xCordSmallP[k] = (int) (height*1/45* Math.cos(k*2*Math.PI/5+180)+midX+1);
+			//yCordSmallP[k] = (int) (height*1/75* Math.sin(k*2*Math.PI/5+180)+midY+1);
+		//}		
+		//g.fillPolygon(xCordSmallP, yCordSmallP, 5);
 	}
 }

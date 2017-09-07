@@ -1,0 +1,25 @@
+
+The objective of this project was to write a program that produces an Applet which displays the United States flag to scale.
+	
+My project fulfills the specification correctly.
+It creates a flag with 13 stripes of alternating colors (red, white), creates a blue rectangle representative of the union of the flag.
+On top of the union, there are 50 white stars, in the same arrangement as on the actual flag.
+All parts of the flag are to scale.
+The entire Applet is scaleable, allowing you to make the flag larger/smaller via the size of the Applet.
+I was not able to figure out code that would allow the user to scale the flag using mouse wheel or other methods.
+
+I have not found any errors in my code, or anything that falls short of project expectations.
+However, I think that I could've included more options in the way that the flag is scaled, as stated in the above paragraph.
+
+The code first declares several variables to represent the dimensions of the different things on the flag.
+Because paint() is executed by JApplet, I first used it to get the height and width of the Applet, in order to make the flag fit the Applet.
+Then I called paintFlag(). First, a red background (made with a rectangle) is created.
+In that method, I have a for loop to print 6 white stripes for the flag.
+Next, I have a code that paints a blue rectangle for the union of the flag.
+After that, I have code that calls the method stars() in order to print fifty stars.
+The stars method takes in the x coordinate and y coordinate of the needed star and prints a star.
+
+Some challenges I faced during making this code was that I couldn't figure out the right equations to make the flag scale properly.
+I also ran into some trouble with creating the stars - the centers of the stars didn't show correctly.
+
+Amelia helped me figure out my errors with scaling the flag, while Caleb offered a solution for the problem with the star missing its center.
