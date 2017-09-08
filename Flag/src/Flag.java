@@ -1,6 +1,7 @@
 
 import java.awt.*;
 import javax.swing.JApplet;
+import java.awt.Color;
 
 /**
  * Creates an American Flag.
@@ -9,6 +10,9 @@ import javax.swing.JApplet;
  * @version 9/7/17
  */
 public class Flag extends JApplet {
+	
+	private final static Color OLDGLORYRED = new Color(0xBF0A30);
+    private final static Color OLDGLORYBLUE = new Color(0x002868);
 	
 	private static final double B = 1.9;
 	private static final double C = 0.5385;
@@ -49,7 +53,7 @@ public class Flag extends JApplet {
 	public void paintFlag(Graphics g, int height, int width) {
 		
 		//draw stripes
-		g.setColor(Color.RED);
+		g.setColor(OLDGLORYRED);
 		g.fillRect(0, 0, (int) width, (int) height);
 		
 		g.setColor(Color.WHITE);
@@ -58,7 +62,7 @@ public class Flag extends JApplet {
 		}
 		
 		//draw union
-		g.setColor(Color.BLUE);
+		g.setColor(OLDGLORYBLUE);
 		g.fillRect(0, 0, (int) (height * D), (int) (height * C));
 		
 		//draw stars
