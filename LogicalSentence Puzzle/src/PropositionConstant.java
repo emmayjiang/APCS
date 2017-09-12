@@ -1,9 +1,13 @@
 
 public class PropositionConstant {
 	
-	private String lolstr;
+	private String str;
 	
 	public PropositionConstant(String str) {
-		lolstr = str;
+		this.str = str;
+	}
+	
+	public String get() {
+		return str;
 	}
 }
