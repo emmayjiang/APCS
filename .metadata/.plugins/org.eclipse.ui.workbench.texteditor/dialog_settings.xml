@@ -2,16 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="yc" key="selection"/>
+		<item value="OLDGLORYBLUE" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Color.BLUE"/>
+			<item value="Color.RED"/>
 			<item value="midY"/>
 			<item value="midX"/>
 		</list>
 		<list key="replacehistory">
+			<item value="OLDGLORYBLUE"/>
+			<item value="OLDGLORYRED"/>
 			<item value="yc"/>
 			<item value="xc"/>
 		</list>

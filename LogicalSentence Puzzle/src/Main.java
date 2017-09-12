@@ -1,6 +1,13 @@
 
 public class Main {
 	
+	/**
+	 * Make a class proposition constant that takes a string and stores
+	 * Make a class called logical sentence that can take in logical sentences and proposition constants
+	 * Make a class called negation that takes in a logical sentence and negates it
+	 * Truth assignment class basically has one method called put(constant, Boolean) that sets the constant to true or false
+	 * Evaluate is a method inside logical sentence that takes in a truth assignment
+	 */
 	public static void main(String[] args) {
 		
 		PropositionConstant a = new PropositionConstant("a");
