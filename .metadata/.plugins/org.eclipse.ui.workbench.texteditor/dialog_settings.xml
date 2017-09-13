@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="return false" key="selection"/>
+		<item value="Implication" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Biconditional"/>
+			<item value="Disjunction"/>
 			<item value="return &quot;False&quot;"/>
 			<item value="Color.BLUE"/>
 			<item value="Color.RED"/>
@@ -15,6 +17,8 @@
 			<item value="midX"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Implication"/>
+			<item value="Biconditional"/>
 			<item value="return false"/>
 			<item value="OLDGLORYBLUE"/>
 			<item value="OLDGLORYRED"/>
