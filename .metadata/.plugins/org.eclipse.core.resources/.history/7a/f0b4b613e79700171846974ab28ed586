@@ -1,0 +1,23 @@
+
+public class TruthAssignment {
+	
+	private boolean truthVal;
+	private PropositionConstant propC;
+
+	public TruthAssignment() {
+		
+	}
+	
+	/**
+	 * uh u wanna make two arrays for these lol
+	 */
+	public void put(PropositionConstant propC, boolean truthVal) {
+		this.truthVal = truthVal;
+		this.propC = propC;
+	}
+	
+	public boolean get() {
+		return truthVal;
+	}
+	
+}

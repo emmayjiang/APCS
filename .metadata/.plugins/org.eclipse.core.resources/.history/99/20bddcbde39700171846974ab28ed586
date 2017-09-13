@@ -1,0 +1,9 @@
+
+public class Negation extends LogicalSentence {
+	
+	private LogicalSentence logSen;
+	
+	public Negation(LogicalSentence logSen) {
+		this.logSen = logSen;
+	}
+}

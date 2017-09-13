@@ -20,13 +20,13 @@ public class TruthAssignment {
 		PropositionConstant[] pc = new PropositionConstant[i];
 		boolean[] tv = new boolean[i];
 		
-		for (int j = 0; j < this.pc.length; j++) {
+		for (int j = 0; j < i-1; j++) {
 			pc[j] = this.pc[j];
 			tv[j] = this.tv[j];
 		}
 		
-		pc[i] = propC;
-		tv[i] = truthVal;
+		pc[i-1] = propC;
+		tv[i-1] = truthVal;
 		
 		this.pc = pc;
 		this.tv = tv;
