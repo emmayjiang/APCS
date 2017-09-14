@@ -9,6 +9,8 @@ public class PropositionConstant {
 	
 	/**
 	 * Gets the String that represents the propositional constant.
+	 * 
+	 * @return	the string that is the propositional constant.
 	 */
 	public String get() {
 		return str;

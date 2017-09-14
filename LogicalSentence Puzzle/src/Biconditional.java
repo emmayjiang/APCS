@@ -9,6 +9,9 @@ public class Biconditional extends LogicalSentence {
 		this.l2 = l2;
 	}
 	
+	/**
+	 * Finds the truth value after a biconditional is performed.
+	 */
 	public boolean evaluate(TruthAssignment truthVal) {
 		boolean retVal = false;
 		if (l1.evaluate(truthVal) == l2.evaluate(truthVal)) {

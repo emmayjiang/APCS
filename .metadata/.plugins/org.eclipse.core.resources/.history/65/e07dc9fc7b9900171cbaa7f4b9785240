@@ -1,0 +1,12 @@
+
+The goal of the logical sentence puzzle assignment was to, based on a chunk of code provided by Mr. Kuszmaul, create a program that executes it as intended.
+
+My project fulfills the specifications as it was written. There are new classes and methods inside those classes that allows the code to be executable.
+
+Currently, one of the issues that I was unable to fix was making my truthTable() method handle not just propositional constants, but logical sentences as well.
+
+Overview of the code explaining, in broad strokes, the structure of it
+
+Discussion of major challenges encountered in the process of making the code
+
+Acknowledgements (who helped you, what resources you used etc.)

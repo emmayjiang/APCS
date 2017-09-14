@@ -9,6 +9,9 @@ public class Conjunction extends LogicalSentence {
 		this.l2 = l2;
 	}
 	
+	/**
+	 * Finds the truth value after a conjunction is performed.
+	 */
 	public boolean evaluate(TruthAssignment truthVal) {
 		boolean retVal = l1.evaluate(truthVal) && l2.evaluate(truthVal);
 		

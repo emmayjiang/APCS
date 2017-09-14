@@ -1,0 +1,20 @@
+
+The goal of the logical sentence puzzle assignment was to, based on a chunk of code provided by Mr. Kuszmaul, create a program that executes it as intended.
+
+My project fulfills the specifications as it was written. There are new classes and methods inside those classes that allows the code to be executable.
+
+The only issue that I was unable to fix was making my truthTable() method handle not just propositional constants, but logical sentences as well.
+
+The five classes based off the five logical operators, Biconditional, Conjunction, Disjunction, Implication, and Negation, all take in logical sentence(s)
+It return the truth value of the logical sentences after the logical operation was performed. 
+LogicalSentence has several methods: legal (and its helper methods), findMatch, and truthTable:
+	legal figures out if a string that is inputed is a legal logical sentence. The structure was mostly taken from a previous assignment.
+	findMatch basically returns the index of the rightmost character in the first substring of the argument that is enclosed by matching parenthesis and which contains no parenthesis.
+	truthTable prints a truth table for only propositional constants.
+PropositionalConstant takes in a string and stores it, the string being the symbol that represents the propositional constant.
+TruthAssignment assigns each propositional constant and their truth value to an array.
+
+A lot of the instructions were very confusing, but thanks to explanation from both peers and Mr. Kuszmaul, I was able to figure out how to finish the project.
+Some problems I had with the code itself was truth table, since I couldn't think of a logical way to make them print. I had help figuring out the math, who I will mention in acknowledgements.
+
+I had Amy's help with the math for truthTable. I also checked what my code printed against hers, to make sure I did everything right. 
