@@ -3,6 +3,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -21,6 +22,7 @@ public class Display extends JPanel {
 	public Display(int num, Hivolts lo) {
 		this.num = num;
 		hi = lo;
+		setBackground(Color.BLACK);
 		self = this;
 	}
 
@@ -31,10 +33,11 @@ public class Display extends JPanel {
 	Image startimg = new ImageIcon("resources/start.png").getImage();
 
 	/**
-	 * Paints each screen depending on what the value of num is.
+	 * Repaints each screen depending on what the value of num is.
 	 */
 	@Override
 	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		if (num == 0) {
 			paintTitle(g);
 
@@ -108,14 +111,16 @@ public class Display extends JPanel {
 	 * Paints the restart button on the win / game over screen.
 	 */
 	public void restartButton(Graphics g) {
-
 		ImageIcon restart = new ImageIcon((restartimg));
 		JButton button = new JButton(restart);				//creates the button
 
 		add(button);
 		button.setLocation(350, 400);
-		button.setSize(225, 100);
-		//button.setOpaque(true);
+		button.setSize(250, 100);
+		button.setOpaque(true);
+		button.setFocusable(false);
+		
+		
 		button.addActionListener(new ActionListener() {		//detect when button is pressed
 			@Override
 			public void actionPerformed(ActionEvent e) {	//button commands
@@ -124,18 +129,11 @@ public class Display extends JPanel {
 				hi.ended = false;
 				hi.counter = 0;
 				
-				Board next = new Board();					//intialize the new board and removes button
-				Dimension size = new Dimension(650, 750);
-				next.setMinimumSize(size);
-				next.setDefaultCloseOperation(Board.EXIT_ON_CLOSE);
-				hi.bohred = next;
 				self.remove(button);
-				hi.bohred.remove(self);
 				hi.paintScreen(3);
-				next.setVisible(true);
 			}
-
 		});
+		
 		button.setVisible(true);
 
 	}
@@ -144,41 +142,20 @@ public class Display extends JPanel {
 	 * Paints the screen that shows up upon winning the game.
 	 */
 	public void paintWin(Graphics g) {
-		hi.bohred.remove(hi.onscreen);		//removes the game
-		hi.onscreen.validate();
 		
-		hi.onscreen = this;
-
 		g.drawImage(winimg, 0, 0, null);
+		restartButton(g);
 		
-		ImageIcon restart = new ImageIcon(restartimg);	//calls restart button
-		JButton button = new JButton(restart);		//adds restart button
-		add(button);
-		button.setLocation(350, 400);
-		button.setSize(200, 100);
-		button.setOpaque(true);
-
 	}
 
 	/**
 	 * Paints the screen that shows up upon losing the game
 	 */
 	public void paintLost(Graphics g) {
-		hi.bohred.remove(hi.onscreen);		//removes the game
-		hi.onscreen.validate();
 		
-		hi.onscreen = this;
-		hi.onscreen.setNum(2);
-
- 
 		g.drawImage(loseimg, 0, 0, null);
+		restartButton(g);
 		
-		ImageIcon restart = new ImageIcon(restartimg);	//calls restart button
-		JButton button = new JButton(restart);		//adds restart button
-		add(button);
-		button.setLocation(350, 400);
-		button.setSize(200, 100);
-		button.setOpaque(true);
 	}
 
 	/**

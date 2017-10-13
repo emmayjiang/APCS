@@ -36,7 +36,6 @@ public class Hivolts extends JFrame {
 				int key = e.getKeyCode();
 				if (playerturn == true) {
 					if (key == KeyEvent.VK_S) { // SIT STILL
-
 					} else {
 						bohred.getBoard()[bohred.player.getY()][bohred.player.getX()].removeEntity();
 						// removes player temporarily from the board
@@ -104,19 +103,15 @@ public class Hivolts extends JFrame {
 	};
 
 	/**
-	 * Method to create a JPanel that functions as the display.
+	 * Method to repaint the display.
 	 * 
 	 * @param type
 	 *            integer signifying type of display (0) title (1) lose (2) win (3)
 	 *            in-game
 	 */
 	public void paintScreen(int type) {
-		Display screen = new Display(type, this);
-		screen.setNum(type);
-		onscreen = screen;
-		bohred.add(screen);
-		bohred.pack();
-		screen.setVisible(true);
+		onscreen.setNum(type);
+		onscreen.repaint();
 	}
 
 	/**
@@ -128,26 +123,25 @@ public class Hivolts extends JFrame {
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 12; j++) {
 				Cell[][] positions = bohred.getBoard();
-				Entity moving = positions[i][j].getContained();
+				Entity moving = positions[i][j].contained;
 				if (moving instanceof Mho && ((Mho) moving).checkMoved == false) { // checks to see if the cell contains
 																					// a mho, and whether that mho has
 																					// been moved or not
 					((Mho) moving).turn(j, i);
 					((Mho) moving).checkMoved = true;
-					if (positions[i][j].contained instanceof Player) {
-						paintScreen(2);
-					} else {
-						positions[i][j].removeEntity(); // removes the mho after it has been moved
-					}
+					positions[i][j].removeEntity(); // removes the mho after it has been moved
 
-					if (positions[((Mho) moving).getY()][((Mho) moving).getX()].contained instanceof Fence
-							|| (((Mho) moving).getY() == bohred.player.getY())
-									&& (((Mho) moving).getX() == bohred.player.getX())) { // if the next square is not a
-																							// fence or player
+					if ((((Mho) moving).getY() == bohred.player.getY())
+							&& (((Mho) moving).getX() == bohred.player.getX())) { // if the next square is not a
+																					// fence or player
 						won = false;
 						ended = true;
 						paintScreen(2);
-					} else {
+						return;
+
+					}
+					if (!(positions[((Mho) moving).getY()][((Mho) moving).getX()].contained instanceof Fence)) {
+
 						positions[((Mho) moving).getY()][((Mho) moving).getX()].addEntity(moving); // add mho to that
 																									// square
 					}
@@ -155,27 +149,24 @@ public class Hivolts extends JFrame {
 			}
 		}
 
-		int counter = 0;
+		int mcounter = 0;
 		for (int i = 0; i < 12; i++) { // resets checkMoved boolean for next turn
 			for (int j = 0; j < 12; j++) {
 				Cell[][] positions = bohred.getBoard();
-				Entity moving = positions[i][j].getContained();
+				Entity moving = positions[i][j].contained;
 				if (moving instanceof Mho) {
 					((Mho) moving).checkMoved = false;
-					counter++;
+					mcounter++;	//counts number of mhos
 				}
 			}
 		}
-		if (counter > 0) { // if there is more than one mho
-			playerturn = true;
-			paintScreen(3); // update in-game display
-		} else {
-			won = true;
-			ended = true;
-			paintScreen(1); // no more mhos, so display win-screen
+		System.out.println("Mhos left: " + mcounter);
+		if (mcounter == 0) { // if there is more than one mho
+			paintScreen(1); // win screen
+			return;
 		}
-
-		paintScreen(3);
+		playerturn = true;	//next turn
+		paintScreen(3);		//update game display
 	}
 
 	/**
@@ -194,8 +185,21 @@ public class Hivolts extends JFrame {
 		bohred.setBackground(Color.BLACK);
 		bohred.setMinimumSize(size);
 		bohred.setDefaultCloseOperation(Board.EXIT_ON_CLOSE);
+
 		Hivolts hi = new Hivolts(bohred);
+
+		Display screen = new Display(0, hi);
+		screen.setNum(0);
+		screen.setBackground(Color.BLACK);
+		screen.addKeyListener(hi.eavesdrop());
+		screen.setFocusable(true);
+		screen.requestFocusInWindow();
+		hi.onscreen = screen;
+		bohred.add(screen);
+		bohred.pack();
+		screen.setVisible(true);
 		hi.paintScreen(0);
+
 		bohred.setVisible(true);
 
 	}

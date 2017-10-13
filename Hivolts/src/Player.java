@@ -6,6 +6,9 @@ public class Player extends Entity {
 
 	Board bohred;
 	
+	public int x;
+	public int y;
+	
 	public Player(Board chess) {
 		super(chess);
 	}

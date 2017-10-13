@@ -1,5 +1,8 @@
 
 import javax.swing.JFrame;
+
+import java.awt.Color;
+import java.awt.Frame;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
@@ -34,6 +37,12 @@ public class Board extends JFrame {
 	 * Randomly places 20 fences and 12 mhos into the field. Places fences along the 44 cells of the perimeter.
 	 */
 	public void FenceandMho() {
+		// Clean the 2D array
+		for (int i = 0; i < 12; i++) {
+			for (int j=0; j< 12; j++) {
+				positions[i][j].removeEntity();
+			}
+		}
 
 		// create a proxy 1D array for easy randomization
 		Entity[] proxy = new Entity[100];
@@ -88,7 +97,7 @@ public class Board extends JFrame {
 		ArrayList<Cell> vacant = new ArrayList<Cell>();
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 12; j++) {
-				if (positions[i][j].getContained() == null) {
+				if (positions[i][j].contained == null) {
 					vacant.add(positions[i][j]);
 				}
 			}
@@ -98,7 +107,7 @@ public class Board extends JFrame {
 		vacant.get(r).addEntity(boi);
 		player = boi;
 		player.setLocation(vacant.get(r));
-		System.out.println(vacant.get(r));
+		//System.out.println(vacant.get(r));
 	}
 
 	/**
@@ -108,7 +117,7 @@ public class Board extends JFrame {
 		ArrayList<Cell> vacant = new ArrayList<Cell>();	//new ArrayList to store empty cells
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 12; j++) {
-				if (positions[i][j].getContained() == null) {
+				if (positions[i][j].contained == null) {
 					vacant.add(positions[i][j]);			//check board for empty cells to add
 				}
 			}
@@ -124,10 +133,10 @@ public class Board extends JFrame {
 	 */
 	public boolean collisions() {
 
-		if (positions[player.getY()][player.getX()].getContained() instanceof Fence) {
+		if (positions[player.getY()][player.getX()].contained instanceof Fence) {
 			return true;
 		}
-		if (positions[player.getY()][player.getX()].getContained() instanceof Mho) {
+		if (positions[player.getY()][player.getX()].contained instanceof Mho) {
 			return true;
 		} else {
 			positions[player.getY()][player.getX()].addEntity(player);
@@ -143,13 +152,13 @@ public class Board extends JFrame {
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 12; j++) {
 				Cell next = positions[j][i];
-				if (next.getContained() instanceof Fence) {
+				if (next.contained instanceof Fence) {
 					g.drawImage(fenceimg, next.getX(), next.getY(), null);	//paint fence
-				} else if (next.getContained() instanceof Mho) {
+				} else if (next.contained instanceof Mho) {
 					g.drawImage(mhoimg, next.getX(), next.getY(), null);		//paint mho
-				} else if (next.getContained() instanceof Player) {
+				} else if (next.contained instanceof Player) {
 					g.drawImage(playerimg, next.getX(), next.getY(), null);	//paint player
-				}
+				} 
 			}
 		}
 	}

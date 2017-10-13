@@ -4,10 +4,10 @@
  */
 public class Mho extends Entity {
 
-	private boolean checkFence = true;
+	
 	public int x;
 	public int y;
-	
+	private boolean checkFence = true;
 	public boolean checkMoved = false;
 
 	public Mho(Board bohred) {
@@ -47,7 +47,7 @@ public class Mho extends Entity {
 	 */
 	public boolean checkHorizontal() {
 		for (int i = 0; i < 12; i++) {
-			if (bohred.getBoard()[y][i].getContained() instanceof Player) {		//checks for player on its horizontal
+			if (bohred.getBoard()[y][i].contained instanceof Player) {		//checks for player on its horizontal
 				if (this.x > i) {		//moving methods
 					this.x -= 1;
 				} else if (this.x < i) {
@@ -69,7 +69,7 @@ public class Mho extends Entity {
 	 */
 	public boolean checkVertical() {
 		for (int i = 0; i < 12; i++) {
-			if (bohred.getBoard()[i][x].getContained() instanceof Player) {		//checks for player on its vertical
+			if (bohred.getBoard()[i][x].contained instanceof Player) {		//checks for player on its vertical
 				if (this.y > i) {		//moving methods
 					this.y -= 1;
 				} else if (this.y < i) {
@@ -92,7 +92,7 @@ public class Mho extends Entity {
 		int y = this.y;
 		for (int i = 0; i < 12; i++) { 
 			for (int j = 0; j < 12; j++) {
-				if (bohred.getBoard()[i][j].getContained() instanceof Player) {		//checks diagonal for player
+				if (bohred.getBoard()[i][j].contained instanceof Player) {		//checks diagonal for player
 					if (this.x > j) {		//move
 						x = x - 1;
 					} else {
@@ -103,7 +103,7 @@ public class Mho extends Entity {
 					} else {
 						y = y + 1;
 					}
-					if (!checkFence || !(bohred.getBoard()[y][x].getContained() instanceof Fence)) {	//decides whether or not to check for fence collisions
+					if (!checkFence || !(bohred.getBoard()[y][x].contained instanceof Fence)) {	//decides whether or not to check for fence collisions
 						this.x = x;
 						this.y = y;
 						return true;
@@ -125,7 +125,7 @@ public class Mho extends Entity {
 		int y = this.y;
 		for (int i = 0; i < 12; i++) { 
 			for (int j = 0; j < 12; j++) {
-				if (bohred.getBoard()[i][j].getContained() instanceof Player) {		//checks for distance from player horizontally and vertically
+				if (bohred.getBoard()[i][j].contained instanceof Player) {		//checks for distance from player horizontally and vertically
 					if (Math.abs(x - j) >= Math.abs(y - i)) {
 						if (this.x > j) {		//move
 							this.x -= 1;
@@ -139,7 +139,7 @@ public class Mho extends Entity {
 							this.y += 1;
 						}
 					}
-					if (!checkFence || !(bohred.getBoard()[y][x].getContained() instanceof Fence)) {		//decides whether or not to check for fence collisions
+					if (!checkFence || !(bohred.getBoard()[y][x].contained instanceof Fence)) {		//decides whether or not to check for fence collisions
 						this.x = x;
 						this.y = y;
 						return true;

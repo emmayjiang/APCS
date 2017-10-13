@@ -34,13 +34,6 @@ public class Cell {
 	}
 	
 	/**
-	 * Returns the contained entity.
-	 */
-	public Entity getContained() {
-		return contained;
-	}
-	
-	/**
 	 * Gets the x coordinate of the cell.
 	 */
 	public int getX() {
