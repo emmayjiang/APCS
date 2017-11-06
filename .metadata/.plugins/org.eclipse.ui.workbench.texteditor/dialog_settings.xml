@@ -2,35 +2,44 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="z" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="cxculxte("/>
-			<item value="cxculxte"/>
-			<item value="b"/>
 			<item value="a"/>
-			<item value="Biconditional"/>
-			<item value="Disjunction"/>
-			<item value="return &quot;False&quot;"/>
-			<item value="Color.BLUE"/>
-			<item value="Color.RED"/>
-			<item value="midY"/>
-			<item value="midX"/>
-		</list>
-		<list key="replacehistory">
-			<item value="calculate"/>
+			<item value="b"/>
+			<item value="c"/>
+			<item value="z"/>
 			<item value="y"/>
 			<item value="x"/>
+			<item value="pascal"/>
+			<item value="PokerHand"/>
+			<item value="print()"/>
+			<item value=".print()"/>
+			<item value="print"/>
+			<item value="temp"/>
+			<item value="has"/>
+			<item value="break"/>
+			<item value="hasFlush"/>
+		</list>
+		<list key="replacehistory">
+			<item value="z"/>
+			<item value="y"/>
+			<item value="x"/>
+			<item value="c"/>
+			<item value="b"/>
+			<item value="a"/>
+			<item value="Pascal"/>
+			<item value="PokerHand2"/>
+			<item value="truthval"/>
+			<item value="cardNum"/>
+			<item value="/**"/>
+			<item value="numerator"/>
+			<item value="calculate"/>
 			<item value="Implication"/>
 			<item value="Biconditional"/>
-			<item value="return false"/>
-			<item value="OLDGLORYBLUE"/>
-			<item value="OLDGLORYRED"/>
-			<item value="yc"/>
-			<item value="xc"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
