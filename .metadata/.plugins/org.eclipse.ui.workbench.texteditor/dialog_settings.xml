@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="z" key="selection"/>
+		<item value="vector" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="victor"/>
 			<item value="a"/>
 			<item value="b"/>
 			<item value="c"/>
@@ -22,9 +23,9 @@
 			<item value="temp"/>
 			<item value="has"/>
 			<item value="break"/>
-			<item value="hasFlush"/>
 		</list>
 		<list key="replacehistory">
+			<item value="vector"/>
 			<item value="z"/>
 			<item value="y"/>
 			<item value="x"/>
@@ -39,12 +40,11 @@
 			<item value="numerator"/>
 			<item value="calculate"/>
 			<item value="Implication"/>
-			<item value="Biconditional"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="248" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="354" key="DIALOG_HEIGHT"/>
 		<item value="522" key="DIALOG_X_ORIGIN"/>
 		<item value="112" key="DIALOG_Y_ORIGIN"/>
