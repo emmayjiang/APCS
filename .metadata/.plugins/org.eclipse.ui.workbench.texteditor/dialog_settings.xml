@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="currencyNames" key="selection"/>
+		<item value="frame" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="container"/>
 			<item value="petStrings"/>
 			<item value="onscreen"/>
 			<item value="victor"/>
@@ -22,9 +23,9 @@
 			<item value="print()"/>
 			<item value=".print()"/>
 			<item value="print"/>
-			<item value="temp"/>
 		</list>
 		<list key="replacehistory">
+			<item value="frame"/>
 			<item value="currencyNames"/>
 			<item value="vector"/>
 			<item value="z"/>
@@ -39,7 +40,6 @@
 			<item value="cardNum"/>
 			<item value="/**"/>
 			<item value="numerator"/>
-			<item value="calculate"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
