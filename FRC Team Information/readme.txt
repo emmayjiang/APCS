@@ -12,7 +12,9 @@ d. Overview of code
 	The class Display has the main method. It has a Scanner input which allows the user to input either "team" or "regional", which will then run the method in either the Teams or Regionals class. Or, if the wrong word is entered, it will prompt the user to resubmit their word.
 	The Teams class first allows for input of either a team name or a team number, and uses the isNumeric method described in Search to decide whether the input is a team name or number. Then it uses BufferedReader to read from the URL taken from the blue alliance's database, gets the line that corresponds to the team number or name, and prints it in a nicely formatted manner.
 	The Regionals class uses an inputted year and competition name to go to a website, part of the blue alliance's database, and prints all the teams that were at the competition. The process is similar to that in the Teams class.
+
 e. Major challenges
 	For this project, I had originally intended to use the blue alliance site by itself, because I thought it would be easier, but unfortunately I realized too late that it wouldn't be possible. Therefore, I had to think of a workaround, which i found using the database. Also, I ran into a lot of errors with the url, including some unhandled exceptions, as well as a lot of String mistakes.
+
 f. Acknowledgements
 	Database: https://github.com/the-blue-alliance
