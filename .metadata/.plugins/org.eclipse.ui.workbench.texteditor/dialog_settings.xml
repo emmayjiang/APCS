@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="frame" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="system"/>
+			<item value="double"/>
 			<item value="container"/>
 			<item value="petStrings"/>
 			<item value="onscreen"/>
@@ -21,8 +23,6 @@
 			<item value="pascal"/>
 			<item value="PokerHand"/>
 			<item value="print()"/>
-			<item value=".print()"/>
-			<item value="print"/>
 		</list>
 		<list key="replacehistory">
 			<item value="frame"/>
@@ -46,7 +46,7 @@
 		<item value="248" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="354" key="DIALOG_HEIGHT"/>
-		<item value="522" key="DIALOG_X_ORIGIN"/>
-		<item value="112" key="DIALOG_Y_ORIGIN"/>
+		<item value="713" key="DIALOG_X_ORIGIN"/>
+		<item value="94" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
