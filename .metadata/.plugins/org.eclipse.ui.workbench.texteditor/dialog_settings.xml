@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="current" key="selection"/>
+		<item value="union" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
-		<item value="true" key="wholeword"/>
+		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="union"/>
+			<item value="intersect"/>
+			<item value="object"/>
+			<item value="objectr"/>
+			<item value="int counter = 0"/>
+			<item value="arraylist"/>
+			<item value="arraylists"/>
 			<item value="test"/>
 			<item value="job"/>
 			<item value="Priority"/>
@@ -16,15 +23,10 @@
 			<item value="double"/>
 			<item value="container"/>
 			<item value="petStrings"/>
-			<item value="onscreen"/>
-			<item value="victor"/>
-			<item value="a"/>
-			<item value="b"/>
-			<item value="c"/>
-			<item value="z"/>
-			<item value="y"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ArrayList"/>
+			<item value="ArrayLists"/>
 			<item value="current"/>
 			<item value="E"/>
 			<item value="frame"/>
@@ -38,8 +40,6 @@
 			<item value="a"/>
 			<item value="Pascal"/>
 			<item value="PokerHand2"/>
-			<item value="truthval"/>
-			<item value="cardNum"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
