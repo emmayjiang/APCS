@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="false" key="isRegEx"/>
-		<item value="union" key="selection"/>
+		<item value="true" key="isRegEx"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="println"/>
+			<item value="node"/>
+			<item value="start.getID"/>
+			<item value="while"/>
+			<item value="i - 1"/>
+			<item value="i-1"/>
+			<item value="nDis"/>
+			<item value="addedge"/>
 			<item value="union"/>
 			<item value="intersect"/>
 			<item value="object"/>
@@ -15,16 +23,9 @@
 			<item value="int counter = 0"/>
 			<item value="arraylist"/>
 			<item value="arraylists"/>
-			<item value="test"/>
-			<item value="job"/>
-			<item value="Priority"/>
-			<item value="print"/>
-			<item value="system"/>
-			<item value="double"/>
-			<item value="container"/>
-			<item value="petStrings"/>
 		</list>
 		<list key="replacehistory">
+			<item value="addEdge"/>
 			<item value="ArrayList"/>
 			<item value="ArrayLists"/>
 			<item value="current"/>
@@ -39,7 +40,6 @@
 			<item value="b"/>
 			<item value="a"/>
 			<item value="Pascal"/>
-			<item value="PokerHand2"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
