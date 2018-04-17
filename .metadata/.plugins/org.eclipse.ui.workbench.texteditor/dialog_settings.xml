@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="isRegEx"/>
-		<item value="Square" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="begin"/>
+			<item value="begin."/>
 			<item value="E_Square"/>
 			<item value="E_Rectangle"/>
 			<item value="E_Shape"/>
@@ -21,10 +23,9 @@
 			<item value="nDis"/>
 			<item value="addedge"/>
 			<item value="union"/>
-			<item value="intersect"/>
-			<item value="object"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="Square"/>
 			<item value="Rectangle"/>
 			<item value="Shape"/>
@@ -39,7 +40,6 @@
 			<item value="vector"/>
 			<item value="z"/>
 			<item value="y"/>
-			<item value="x"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
