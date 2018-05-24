@@ -74,7 +74,7 @@ public class Regionals extends Search {
 
 		// checks to confirm that the year is an integer
 		if (isNumeric(inputYear)) {
-			if (!(Integer.parseInt(inputYear) >= 1992 && Integer.parseInt(inputYear) <= 2017)) {
+			if (!(Integer.parseInt(inputYear) >= 1992 && Integer.parseInt(inputYear) <= 2018)) {
 				System.out.println("Error: Unable to find Regionals. Please try another year.");
 				restart();
 			}
